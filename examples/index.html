@@ -1,15 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de-DE">
   <head>
     <meta charset="utf-8" />
-    <title>custom-element demo</title>
+    <title>number format demo</title>
   </head>
   <body>
-    <custom-element></custom-element>
+    <number-format
+      value="1000"
+      unit="meter"
+      format-style="unit"
+      unit-display="narrow"
+      notation="compact"
+    >Hi</number-format>
+    <br/>
+    <div lang="en-GB">
+      <h1>UK Notation</h1>
+
+      <number-format
+        value="1000"
+        currency="GBP"
+        format-style="currency"
+        unit-display="narrow"
+      >Hi</number-format>
+    </div>
+    <div lang="de-DE">
+      <h1>German Notation</h1>
+
+      <number-format
+        lang="ar"
+        value="1000"
+        currency="GBP"
+        format-style="currency"
+        unit-display="narrow"
+      >Hi</number-format>
+    </div>
 
     <script type="module">
-      // import 'https://unpkg.com/@github/custom-element-boilerplate@latest/dist/custom-element.js'
-      import '../src/custom-element.ts'
+      // import 'https://unpkg.com/@github/number-format-boilerplate@latest/dist/number-format.js'
+      import '../src/number-format-element.ts'
     </script>
   </body>
 </html>
